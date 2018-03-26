@@ -9,10 +9,16 @@ def quick_pick_line():
     num = 6
     while num > 0:
         num -= 1
-        lotto_line.append(randint(MINIMUM, MAXIMUM))
+        lotto_num = randint(MINIMUM, MAXIMUM)
+        if lotto_num not in lotto_line:
+            lotto_line.append(lotto_num)
 
     lotto_line.sort()
-    print(lotto_line)
+    return lotto_line
+
+
+
+
 
 
 def main():
@@ -20,6 +26,9 @@ def main():
 
     while num_quick_picks > 0:
         num_quick_picks -= 1
-        quick_pick_line()
+        lotto_line = quick_pick_line()
+        print("")
+        for i in lotto_line:
+            print(i, end=' ',)
 
 main()
