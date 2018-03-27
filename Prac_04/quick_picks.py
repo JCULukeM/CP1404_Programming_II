@@ -17,10 +17,6 @@ def quick_pick_line():
     return lotto_line
 
 
-
-
-
-
 def main():
     num_quick_picks = int(input("How many quick picks"))
 
